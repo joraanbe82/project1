@@ -1,0 +1,49 @@
+<% include _header %>
+
+
+<div class="container perfilUsuario ">
+    <div class="row">
+        <div class="col-5 usuario">
+            <img class="perfil" src="./images/perfilTKW.svg">
+        </div>
+
+        <div class="col-7">
+            <form action="/add" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <div class="col-6 inline-block">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="first_name" placeholder="Nombre" class="form-control">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" name="last_name" placeholder="Apellidos" class="form-control">
+                        <label for="Fecha de nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" name="birth_date" placeholder="Fecha de nacimiento" class="form-control">
+                        <label for="Nacionalidad">Nacionalidad</label>
+                        <input type="text" name="nationality" placeholder="Nacionalidad" class="form-control">
+                    </div>
+                    <div class="col-6 inline-block">
+                        <label for="Peso">Peso</label>
+                        <input type="text" name="weight" placeholder="Peso" class="form-control">
+                        <label for="Cinturon">Cinturon</label>
+                        <input type="text" name="belt" placeholder="Cinturon" class="form-control">
+                        <label for="Email">Email</label>
+                        <input type="email" name="email" placeholder="Email" class="form-control">
+                        <input type="file" class="btn btn-info upload" name="file">
+                        <button type="submit" class="btn btn-primary guardar">Guardar</button>
+                    </div>
+                    
+                    
+            </form>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<% include _footer %>

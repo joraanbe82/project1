@@ -1,0 +1,46 @@
+<% include _header %>
+
+
+<div class="container perfilUsuario">
+    <div class="row">
+        <div class="col-5 usuario">
+            <img class="perfil" src="/images/perfilTKW.svg">
+        </div>
+        <div class="col-7">
+            <form action="/update/<%= data.id %>" enctype="multipart/form-data" method="post">
+                <div class="form-group row">
+                    <div class="col-6 inline-block">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="first_name" value="<%= data.first_name %>" class="form-control">
+                        <label for="Apellidos">Apellidos</label>
+                        <input type="text" name="last_name" value="<%= data.last_name %>" placeholder="Apellidos"
+                            class="form-control">
+                        <label for="Fecha de Nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" name="birth_date" value="<%= data.birth_date %>"
+                            placeholder="Fecha de nacimiento" class="form-control">
+                        <label for="Nacionalidad">Nacionalidad</label>
+                        <input type="text" name="nationality" value="<%= data.nationality %>" placeholder="Nacionalidad"
+                            class="form-control">
+                    </div>
+                    <div class="col-6 inline-block">
+                        <label for="Peso">Peso</label>
+                        <input type="text" name="weight" value="<%= data.weight %>" placeholder="Peso"
+                            class="form-control">
+                        <label for="Cinturon">Cinturon</label>
+                        <input type="text" name="belt" value="<%= data.belt %>" placeholder="Cinturon"
+                            class="form-control">
+                        <label for="Email">Email</label>
+                        <input type="email" name="email" value="<%= data.email %>" placeholder="Email"
+                            class="form-control">
+                        <a href="/delete/<%= data.id%>" class="btn btn-danger">Borrar</a>
+                        <input type="file" class="btn btn-info upload" name="file2">
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<% include _footer %>

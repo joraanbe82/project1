@@ -1,0 +1,40 @@
+<% include _header %>
+/
+
+<% if (data){ 
+    for (let i =0; i < data.length; i++) { %>
+<div class="container ce" id="miniPerfiles">
+
+    <div class="card d-inline-block todo">
+        <div class="centrado text-center">
+        <img class="card-img-top" src="/images/img-perfiles/<%= data[i].picture %>">
+        </div>
+        <div class="card-body inline-block">
+            <h4 class="card-title text-center"><%= data[i].first_name %></h4>
+
+            <p>Apellidos: <%= data[i].last_name %></p>
+            <p>Fecha Nacimiento: <%= data[i].birth_date %></p>
+            <p>Nacionalidad: <%= data[i].nationality %></p>
+            <p>Peso: <%= data[i].weight %></p>
+            <p>Cinturon: <%= data[i].belt %></p>
+            <p>Email: <%= data[i].email %></p>
+
+        </div>
+        <div class="centrado text-center">
+        <a href="/update/<%= data[i].id %>" class="btn btn-success">Modificar Perfil</a>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<% }
+} %>
+
+
+
+<% include _footer %>
+
+
